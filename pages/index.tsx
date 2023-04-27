@@ -4,6 +4,30 @@ import styles from "../styles/Home.module.css";
 import Button from "../components/Button";
 import Soma from "../components/Soma";
 import ReverterString from "../components/ReverterString";
+import AssociarEmpregos from "../components/AssociarEmpregos";
+
+const pessoas = [
+  { id: 1, nome: "João", idade: 25, sexo: "M" },
+  { id: 2, nome: "Italo", idade: 30, sexo: "M" },
+  { id: 3, nome: "Juan", idade: 20, sexo: "M" },
+  { id: 4, nome: "Rachel", idade: 18, sexo: "F" },
+  { id: 5, nome: "Paula", idade: 19, sexo: "F" },
+  { id: 6, nome: "Matheus", idade: 13, sexo: "M" },
+  { id: 7, nome: "Evani", idade: 25, sexo: "F" },
+  { id: 8, nome: "Lucas", idade: 16, sexo: "M" },
+  { id: 9, nome: "Andre Ruan", idade: 35, sexo: "M" },
+  { id: 10, nome: "Giselle", idade: 15, sexo: "F" },
+];
+
+const profissoes = [
+  { pessoaId: 1, nomeProf: "Motorista" },
+  { pessoaId: 2, nomeProf: "Menino do Governo" },
+  { pessoaId: 4, nomeProf: "Dentista" },
+  { pessoaId: 5, nomeProf: "Advogada" },
+  { pessoaId: 7, nomeProf: "Desenvolvedora" },
+  { pessoaId: 9, nomeProf: "Desenvolvedor" },
+  { pessoaId: 10, nomeProf: "Professora" },
+];
 
 export default function Home() {
   return (
@@ -14,23 +38,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
       <main className={styles.main}>
         <h1 className={styles.helloWorldText}>Hello World</h1>
 
-        <Soma notas={[1,2,3,4,5,6,7,8,9,10]} />
-
-        
-        <ReverterString frase="João é um cara muito legal :D"/>
-
         <div>
-          <Button texto="João" cor="blue" quandoClicar={() => console.log('cliquei no João')} />
-          <Button texto="É" cor="green" quandoClicar={() => console.log('cliquei no é')} />
+          <Button texto="João" cor="blue" quandoClicar={() => console.log("cliquei no João")} />
+          <Button texto="É" cor="green" quandoClicar={() => console.log("cliquei no é")} />
           <Button texto="Um cara" cor="red" quandoClicar={() => console.log("cliquei no um cara")} />
           <Button texto="Muito" cor="yellow" quandoClicar={() => console.log("cliquei no muito")} />
           <Button texto="Legal" cor="orange" quandoClicar={() => console.log("cliquei no legal")} />
+          <Button texto="Cor Rosa vai ficar aqui" cor="pink" quandoClicar={() => console.log("cliquei no legal")} />
+        </div>
 
-          
+        <Soma notas={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]} />
 
+        <ReverterString frase="João é um cara muito legal :D" />
+
+        <div>
+          <AssociarEmpregos pessoas={pessoas} profissoes={profissoes} />
         </div>
       </main>
     </>

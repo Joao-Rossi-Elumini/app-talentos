@@ -2,12 +2,12 @@ import styles from "./button.module.css";
 
 interface ButtonInterface {
   texto: string;
-  cor: 'blue' | 'green' | 'red' | 'yellow' | 'orange';
+  cor: "blue" | "green" | "red" | "yellow" | "orange" | "pink";
   quandoClicar: () => void;
 }
 
 export default function Button({ texto, cor, quandoClicar }: ButtonInterface) {
-  console.log(styles[cor])
+  // console.log(styles[cor])
   return (
     <>
       <button className={`${styles.button} ${styles[cor]}`} onClick={quandoClicar}>

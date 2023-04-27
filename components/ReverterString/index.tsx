@@ -6,11 +6,16 @@ interface ReverterStringInterface{
 
 export default function ReverterString({frase}:ReverterStringInterface){
 
-    console.log(frase)
-
     let stringDividida = frase.split(' ')
     let stringInvertida = stringDividida.reverse();
     let stringUnida = stringInvertida.join(' ')
+
+    // let stringTudoEm1 = frase
+    // .split(' ')
+    // .reverse()
+    // .join(' ')
+
+    // console.log(stringTudoEm1)
 
     return (
         <>

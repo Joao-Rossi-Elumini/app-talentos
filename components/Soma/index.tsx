@@ -1,10 +1,7 @@
 
-
-
 interface NotasInterface{
     notas: number[]
 }
-
 
 export default function Soma({notas}:NotasInterface){
 
