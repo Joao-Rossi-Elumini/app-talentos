@@ -7,6 +7,7 @@ import ReverterString from "../components/ReverterString";
 import AssociarEmpregos from "../components/AssociarEmpregos";
 import ListarPessoas from "../components/ListarPessoas";
 import Navbar from "../widgets/Navbar";
+import ButtonCount from "../components/ButtonCount";
 
 const pessoas = [
   { id: 1, nome: "João", idade: 25, sexo: "M" },
@@ -58,16 +59,8 @@ export default function Home() {
 
       <Navbar ancoras={ancoras}/>
 
-      <main className={styles.main}>
-        <h1 className={styles.helloWorldText}>Hello World</h1>
-
-      
-
-        {/* <ListarPessoas pessoas={pessoas}/> */}
-
-        <div>
-          <AssociarEmpregos pessoas={pessoas} profissoes={profissoes} />
-        </div>
+      <main className={styles.main}>      
+        <ButtonCount/>
       </main>
     </>
   );

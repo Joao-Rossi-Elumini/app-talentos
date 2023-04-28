@@ -3,4 +3,13 @@
     flex-direction: row;
     justify-content: space-evenly;
     background-color: cyan;
+    border: 1px solid black;
+    padding: 8px 16px;
+}
+
+@media screen and (max-width:768px){
+    .navBar{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
 }
