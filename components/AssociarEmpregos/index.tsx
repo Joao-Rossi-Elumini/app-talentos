@@ -1,21 +1,20 @@
-interface pessoaInterface {
-  id: number;
-  nome: string;
-  idade: number;
-  sexo: string;
-}
+import Pessoa from "../../interfaces/pessoasInterface";
+
+
 interface profissaoInterface {
   pessoaId: number;
   nomeProf: string;
 }
+
 interface associacaoProps {
-  pessoas: pessoaInterface[];
+  pessoas: Pessoa[];
   profissoes: profissaoInterface[];
 }
 
 export default function AssociarEmpregos({ pessoas, profissoes }: associacaoProps) {
   const pessoasComProfissao = pessoas.map((p) => {
     const profissaoEncontrada = profissoes.find((profissao) => profissao.pessoaId === p.id);
+    console.log(profissaoEncontrada);
 
     return {
       ...p,
@@ -23,10 +22,11 @@ export default function AssociarEmpregos({ pessoas, profissoes }: associacaoProp
     };
   });
 
-
   return (
     <>
       <ul>
+
+
         {pessoasComProfissao.map((p) => {
           return (
             <li key={p.id}>
@@ -36,6 +36,8 @@ export default function AssociarEmpregos({ pessoas, profissoes }: associacaoProp
             </li>
           );
         })}
+
+
       </ul>
     </>
   );
