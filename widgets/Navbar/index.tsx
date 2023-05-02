@@ -12,11 +12,9 @@ interface NavbarProps {
 export default function Navbar({ ancoras }: NavbarProps) {
   return (
       <nav className={styles.navBar}>
-        {ancoras.map((a) => {
+        {ancoras.map((a,index) => {
           return (
-            <>
-              <a href={a.href}>{a.label}</a>
-            </>
+              <a key={index} href={a.href}>{a.label}</a>
           );
         })}
       </nav>

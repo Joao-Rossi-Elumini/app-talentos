@@ -8,29 +8,30 @@ import AssociarEmpregos from "../components/AssociarEmpregos";
 import ListarPessoas from "../components/ListarPessoas";
 import Navbar from "../widgets/Navbar";
 import ButtonCount from "../components/ButtonCount";
+import Dashboard from "../widgets/Dashboard";
 
-const pessoas = [
-  { id: 1, nome: "João", idade: 25, sexo: "M" },
-  { id: 2, nome: "Italo", idade: 30, sexo: "M" },
-  { id: 3, nome: "Juan", idade: 20, sexo: "M" },
-  { id: 4, nome: "Rachel", idade: 18, sexo: "F" },
-  { id: 5, nome: "Paula", idade: 19, sexo: "F" },
-  { id: 6, nome: "Matheus", idade: 13, sexo: "M" },
-  { id: 7, nome: "Evani", idade: 25, sexo: "F" },
-  { id: 8, nome: "Lucas", idade: 16, sexo: "M" },
-  { id: 9, nome: "Andre Ruan", idade: 35, sexo: "M" },
-  { id: 10, nome: "Giselle", idade: 15, sexo: "F" },
-];
+// const pessoas = [
+//   { id: 1, nome: "João", idade: 25, sexo: "M" },
+//   { id: 2, nome: "Italo", idade: 30, sexo: "M" },
+//   { id: 3, nome: "Juan", idade: 20, sexo: "M" },
+//   { id: 4, nome: "Rachel", idade: 18, sexo: "F" },
+//   { id: 5, nome: "Paula", idade: 19, sexo: "F" },
+//   { id: 6, nome: "Matheus", idade: 13, sexo: "M" },
+//   { id: 7, nome: "Evani", idade: 25, sexo: "F" },
+//   { id: 8, nome: "Lucas", idade: 16, sexo: "M" },
+//   { id: 9, nome: "Andre Ruan", idade: 35, sexo: "M" },
+//   { id: 10, nome: "Giselle", idade: 15, sexo: "F" },
+// ];
 
-const profissoes = [
-  { pessoaId: 1, nomeProf: "Motorista" },
-  { pessoaId: 2, nomeProf: "Menino do Governo" },
-  { pessoaId: 4, nomeProf: "Dentista" },
-  { pessoaId: 5, nomeProf: "Advogada" },
-  { pessoaId: 7, nomeProf: "Desenvolvedora" },
-  { pessoaId: 9, nomeProf: "Desenvolvedor" },
-  { pessoaId: 10, nomeProf: "Professora" },
-];
+// const profissoes = [
+//   { pessoaId: 1, nomeProf: "Motorista" },
+//   { pessoaId: 2, nomeProf: "Menino do Governo" },
+//   { pessoaId: 4, nomeProf: "Dentista" },
+//   { pessoaId: 5, nomeProf: "Advogada" },
+//   { pessoaId: 7, nomeProf: "Desenvolvedora" },
+//   { pessoaId: 9, nomeProf: "Desenvolvedor" },
+//   { pessoaId: 10, nomeProf: "Professora" },
+// ];
 
 const ancoras = [
   {label:"PrimeiraAncora", href:"https://google.com"},
@@ -61,6 +62,7 @@ export default function Home() {
 
       <main className={styles.main}>      
         <ButtonCount/>
+        <Dashboard/>
       </main>
     </>
   );
