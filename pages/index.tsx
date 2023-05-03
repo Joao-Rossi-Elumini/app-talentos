@@ -45,6 +45,7 @@ const ancoras = [
 ]
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -63,6 +64,8 @@ export default function Home() {
       <main className={styles.main}>      
         <ButtonCount/>
         <Dashboard/>
+
+        Exemplo Data: {new Date().getFullYear()}
       </main>
     </>
   );
